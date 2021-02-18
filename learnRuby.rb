@@ -69,16 +69,36 @@ until a > 10
 end
 #0,2,4,6,8,10
 
-=end
+
+a = (1..7).to_a
+puts a #[1,2,3,4,5,6,7]
+
+b = (1...4).to_a
+puts b #[1,2,3]
+
+c = ("a".."d").to_a
+puts c #[a,b,c,d]
 
 
 
+for i in 1..5
+  break if i > 3
+  puts i
+end
 
+for i in 0..10
+  next if i%2 == 0
+  puts i
+end
 
+x = 0
+loop do
+  puts x
+  x += 1
+  break if x > 10
+end
 
-
-
-
+=end  #Block 2
 
 
 
