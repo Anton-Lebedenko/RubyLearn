@@ -100,11 +100,144 @@ end
 
 =end  #Block 2
 
+=begin  #Block 3
+
+arr = [5, "Dave", 15.88, false]
+puts arr[0] # 5
+puts arr[1] # Dave
+puts arr[-1] # false
+
+arr << 9 #enter smth
+print arr, "      "
+
+arr.pop
+arr.delete_at(2)
+print arr
+
+
+nums = [6,3,8,7,9]
+puts nums[1..3]
+# [3,8,7]
 
 
 
+a = [1,2,3]
+b = [4,5]
+
+res = a + b
+print res
+# 1,2,3,4,5
 
 
+a = [1,2,3,4,5]
+b = [2,4,5,6]
+
+res = a - b
+print res
+# 1,2,3,4,5
+
+
+c = a * 3
+print c
+
+
+a = [2,3,7,8]
+b = [2,7,9]
+print a & b
+#[2,7]
+
+a = [2,3,7,8]
+b = [2,7,9]
+print a | b
+#[2,3,7,8,9]
+
+
+arr = [5,3,8]
+res = arr.reverse
+print res
+#[8,3,5]
+
+arr = [5,3,8]
+arr.reverse!
+print arr
+#[8,3,5]
+
+
+arrr = [1,2]
+arr = ['b','a',arrr, 'a', 'c']
+puts arr.include?(arrr)
+#true
+# if not array - false
+
+
+ages = { "Ammy" => 23, 5 => 32, [1, "jan"] => "January" }
+puts ages["Ammy"]
+puts ages[5]
+puts ages[[1, "jan"]]
+# 23
+# 32
+# January
+
+
+h = { :name => "Dave", :age => 28, :gender => "male" }
+puts h[:age]  # 28
+h = { name:"Dave", age:28, gender:"male" }
+puts h[:age]  # 28
+
+
+
+car = { :brand=>"BMW", year:2016, color:"red", length:205 }
+car.delete(:length)
+puts car.key("red") #color
+
+res = car.invert
+puts res["BMW"]   #brand
+puts res.keys     #BMW, 2016, red
+puts res.values   #brand, year, color
+puts car.length   #3
+
+
+arr = [[1,2,3], [4,5,6]]
+puts arr[1][2] # 6
+
+cars = {
+  bmw: {year:2016, color:"red"},
+  mercedes: {year:2012, color:"black"},
+  porsche: {year:2014, color:"white"}
+}
+puts cars[:bmw][:color]  # red
+puts cars[:porsche] # {:year=>2014, :color=>"white"}
+
+
+
+arr = [2, -4, 6]
+sum = 0
+arr.each do |x|
+  sum += x
+end
+puts sum  # 4
+
+
+sizes = { svga: 800, hd: 1366, uhd: 3840 }
+sizes.each { |key, value| puts "#{key} => #{value}" }
+
+
+10.times do
+  puts "Hi"
+end
+
+
+text = "I am learning Ruby and it is fun!"
+text.downcase!
+
+freqs = {}
+freqs.default = 0
+
+text.each_char { |char| freqs[char] += 1 }
+
+("a".."z").each { |x| puts "#{x} : #{freqs[x]}" if freqs[x] > 0 }
+
+=end  #Block 3
 
 
 
