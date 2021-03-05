@@ -26,7 +26,7 @@ name = gets.chomp
 puts "Welcome, #{name}"
 
 =end  #Block 1
-
+#######################################################################################################
 =begin  #Block 2
 
 # nil - отсутствие значения
@@ -99,7 +99,7 @@ loop do
 end
 
 =end  #Block 2
-
+##################################################################################################
 =begin  #Block 3
 
 arr = [5, "Dave", 15.88, false]
@@ -238,15 +238,92 @@ text.each_char { |char| freqs[char] += 1 }
 ("a".."z").each { |x| puts "#{x} : #{freqs[x]}" if freqs[x] > 0 }
 
 =end  #Block 3
+#################################################################################################
+=begin  #Block 4
+
+def sum (a, b = 2)
+  puts a + b
+end
+
+x = 1
+y = 3
+sum(x)      #3
+sum(x, y)   #4
+
+
+def greet(name="")
+  if name==""
+    puts "Greetings!"
+  else
+    puts "Welcome, #{name} :)"
+  end
+end
+
+greet(gets.chomp)
+# Welcome, Anton :)
+# chomp - without next line sign
 
 
 
+def someMethod(*p)
+  puts p
+end
+
+someMethod(25, "hello", true)   # 25, hello, true
+
+def myMethod(a, b, *p)
+  p = [p, 1, 2]
+  puts a, b, p
+end
+
+myMethod(25, "hello", true)   # 25, hello, true, 1, 2
 
 
 
+def squares (a, b, c)
+  return a*a, b*b, c*c
+end
+arr = squares(2,3,4)
+puts arr  # 4, 9, 16
+
+def demo (a, b)
+  a = b - 2
+  b = a - 3
+end
+puts demo(5,6)    # 1 (last line always returns without a word Return)
+
+def square(x)
+  x*x
+end
+square(2).times {puts "Hi"}   # Hi, Hi, Hi, Hi
 
 
 
+def add(a, b)
+  a + b
+end
+
+def mult(a, b)
+  a*b
+end
+puts x = mult(add(2,3), add(4,7))   # 55
 
 
 
+$x = 42   # - global var
+arr = [1,2,3]
+arr.each {|x| puts $x}    # 42, 42, 42
+
+
+
+def fact(n)
+  if n <= 1
+    1
+  else
+    n * fact(n - 1)
+  end
+end
+puts fact(5)    #120
+
+=end  #Block 4
+###############################################################################################################
